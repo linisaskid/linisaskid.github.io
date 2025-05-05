@@ -464,6 +464,42 @@ footer {
     width: 100%;
     margin-left: 0;
   }
+
+  :root {
+    --chart-mobile-width: 80vw;
+    --stat-gap: 0.75rem;
+  }
+  .stats-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    gap: var(--stat-gap);
+    width: var(--chart-mobile-width);
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .stat-card {
+    min-width: 0;
+    width: calc((var(--chart-mobile-width) - var(--stat-gap)) / 2);
+    padding: 1.2rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .chart-container {
+    padding: 0.5rem;
+    border-width: 1px;
+    min-width: 0;
+    width: var(--chart-mobile-width);
+    margin-left: 0;
+    margin-right: auto;
+    border-radius: 0.5rem;
+    overflow-x: hidden;
+  }
+  #visitorsChart {
+    width: var(--chart-mobile-width);
+    height: 180px;
+    max-width: var(--chart-mobile-width);
+    display: block;
+  }
 }
 
 .features-grid {
@@ -966,15 +1002,22 @@ footer {
 @media (max-width: 768px) {
   :root {
     --chart-mobile-width: 80vw;
+    --stat-gap: 0.75rem;
   }
-  .testimonials-grid {
-    flex-direction: column;
-    gap: 1.5rem;
+  .stats-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start;
+    gap: var(--stat-gap);
+    width: var(--chart-mobile-width);
+    margin-left: 0;
+    margin-right: auto;
   }
-  .service-card,
-  .testimonial-card {
-    width: 100%;
+  .stat-card {
     min-width: 0;
+    width: calc((var(--chart-mobile-width) - var(--stat-gap)) / 2);
+    padding: 1.2rem 0.5rem;
+    font-size: 0.95rem;
   }
   .chart-container {
     padding: 0.5rem;
@@ -991,5 +1034,14 @@ footer {
     height: 180px;
     max-width: var(--chart-mobile-width);
     display: block;
+  }
+  .testimonials-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-card,
+  .testimonial-card {
+    width: 100%;
+    min-width: 0;
   }
 }

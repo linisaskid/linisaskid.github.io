@@ -87,17 +87,17 @@ if (statsSection) {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !statsAnimated) {
           animateCount("websitesCount", 12, 1200); // Change 12 to your real number
-          animateCount("visitorsCount", 8500, 1500); // Change 8500 to your real number
+          animateCount("visitorsCount", 75500, 1500); // Updated to match total from chart data
           // Draw the visitors chart
           const ctx = document.getElementById("visitorsChart").getContext("2d");
           new Chart(ctx, {
             type: "line",
             data: {
-              labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+              labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
               datasets: [
                 {
                   label: "Visitors",
-                  data: [500, 1200, 2100, 3400, 4200, 6000, 7200, 8500],
+                  data: [500, 1200, 2100, 3400, 4200, 6000, 7200, 8500, 9200, 10500, 11800, 12500],
                   borderColor: "#cbdee7",
                   backgroundColor: "rgba(203,222,231,0.15)",
                   pointBackgroundColor: "#cbdee7",
@@ -120,7 +120,12 @@ if (statsSection) {
                 tooltip: {
                   backgroundColor: "#23242a",
                   titleColor: "#fff",
-                  bodyColor: "#cbdee7"
+                  bodyColor: "#cbdee7",
+                  callbacks: {
+                    label: function(context) {
+                      return `Visitors: ${context.raw.toLocaleString()}`;
+                    }
+                  }
                 }
               },
               scales: {
@@ -134,7 +139,10 @@ if (statsSection) {
                 y: {
                   ticks: { 
                     color: "#a8a9bc",
-                    font: { size: isMobile() ? 10 : 14 }
+                    font: { size: isMobile() ? 10 : 14 },
+                    callback: function(value) {
+                      return value >= 1000 ? (value/1000).toFixed(1) + 'k' : value;
+                    }
                   },
                   grid: { color: "rgba(76,110,245,0.05)" }
                 }
