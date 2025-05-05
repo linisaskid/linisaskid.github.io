@@ -110,6 +110,9 @@ if (statsSection) {
             },
             options: {
               responsive: true,
+              layout: {
+                padding: isMobile() ? { left: 10, right: 30 } : 0
+              },
               plugins: {
                 legend: {
                   display: false
@@ -122,11 +125,17 @@ if (statsSection) {
               },
               scales: {
                 x: {
-                  ticks: { color: "#a8a9bc" },
+                  ticks: { 
+                    color: "#a8a9bc",
+                    font: { size: isMobile() ? 10 : 14 }
+                  },
                   grid: { color: "rgba(76,110,245,0.05)" }
                 },
                 y: {
-                  ticks: { color: "#a8a9bc" },
+                  ticks: { 
+                    color: "#a8a9bc",
+                    font: { size: isMobile() ? 10 : 14 }
+                  },
                   grid: { color: "rgba(76,110,245,0.05)" }
                 }
               }
@@ -196,7 +205,7 @@ if (clientResultsSection) {
             }
           });
           clientChartDrawn = true;
-        }
+        }s
       });
     },
     { threshold: 0.3 }
@@ -208,21 +217,18 @@ if (clientResultsSection) {
 const testimonials = [
   {
     name: "Alex (Client)",
-    subtitle: "10/10",
     color: "#2563eb",
-    review: '"Great service, highly recommended!"'
+    review: '"Great service! The website exceeded my expectations. Communication was clear and timely."'
   },
   {
     name: "Taylor (Client)",
-    subtitle: "9/10",
     color: "#5EA972",
-    review: '"Amazing work, very satisfied!"'
+    review: '"Amazing work! Attention to detail and responsiveness made the experience stress-free."'
   },
   {
     name: "Morgan (Client)",
-    subtitle: "10/10",
     color: "#E06FA3",
-    review: '"Excellent experience, will use again!"'
+    review: '"Excellent experience! The final product looked fantastic and was delivered on time."'
   }
 ];
 
@@ -263,10 +269,10 @@ function updateTestimonial(index) {
   }
   // Name
   fadeContent(".testimonial-title-wrapper", t.name, "testimonial-title");
-  // Subtitle
+  // Remove subtitle rendering
   fadeContent(
     ".testimonial-subtitle-wrapper",
-    t.subtitle,
+    "",
     "testimonial-subtitle"
   );
   // Review
@@ -280,3 +286,8 @@ setInterval(() => {
   testimonialIndex = (testimonialIndex + 1) % testimonials.length;
   updateTestimonial(testimonialIndex);
 }, 3000);
+
+// Helper for mobile detection
+function isMobile() {
+  return window.innerWidth < 769;
+}
