@@ -210,22 +210,19 @@ const testimonials = [
     name: "Alex (Client)",
     subtitle: "10/10",
     color: "#2563eb",
-    review:
-      '"After working with [Your Name], my website traffic and sales doubled in just a few months. The process was smooth and the results speak for themselves!"'
+    review: '"Great service, highly recommended!"'
   },
   {
     name: "Taylor (Client)",
     subtitle: "9/10",
     color: "#5EA972",
-    review:
-      '"The new site looks amazing and is so much faster. My customers love it and my sales have gone up!"'
+    review: '"Amazing work, very satisfied!"'
   },
   {
     name: "Morgan (Client)",
     subtitle: "10/10",
     color: "#E06FA3",
-    review:
-      '"Professional, creative, and always on time. Highly recommended for any web project!"'
+    review: '"Excellent experience, will use again!"'
   }
 ];
 

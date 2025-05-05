@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lin.dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">lin.dev</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#results-testimonials">Reviews & Testimonials</a>
+      </nav>
+      <a href="contact.html" class="button signup-btn">Get in Touch</a>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-lighting"></div>
+        <div class="hero-content">
+          <h1>lin.dev</h1>
+          <p>Crafting beautiful, high-performance websites that drive business growth and deliver exceptional user experiences</p>
+          <div class="tech-stack">
+            <div class="tech-item">Python</div>
+            <div class="tech-item">SQL</div>
+            <div class="tech-item">Spark</div>
+            <div class="tech-item">Airflow</div>
+            <div class="tech-item">AWS</div>
+            <div class="tech-item">GCP</div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="about">
+        <h2>About This Project</h2>
+        <div class="about-container">
+          <div class="about-content">
+            <p>
+              We are the perfect website builder to enhance your web presence, boost engagement, and deliver exceptional user experiences. Our platform empowers you to create beautiful, high-performance websites tailored to your needs—no coding required.
+            </p>
+          </div>
+        </div>
+      </section>
+  
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Real-Time Data Pipeline</h3>
+          <p>
+            Built a real-time data ingestion pipeline using Kafka, Spark Streaming, and Cassandra to process and store streaming data for analytics.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Kafka</span>
+            <span class="tag">Spark</span>
+            <span class="tag">Cassandra</span>
+            <span class="tag">Real-time</span>
+          </div>
+        </div>
+        <div class="project">
+          <h3>ETL Automation with Airflow</h3>
+          <p>
+            Automated complex ETL workflows using Apache Airflow, reducing manual intervention and improving data reliability.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Airflow</span>
+            <span class="tag">ETL</span>
+            <span class="tag">Python</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+      </section>
+  
+      <section id="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon teams-icon">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>Teams/Groups</h3>
+            <p>Collaborate with your team or group on any web project. Our premium platform supports unlimited users and advanced permissions for seamless teamwork.</p>
+            <a href="#" class="feature-link">Learn more</a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon extensible-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Extensible</h3>
+            <p>Unlock limitless customization. Our paid service can code anything you imagine—custom features, integrations, and automations, all built by experts.</p>
+            <a href="#" class="feature-link">Learn more</a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon open-source-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Open Source</h3>
+            <p>Access exclusive, premium open source tools and libraries. Get priority updates and contribute to a thriving, expert-driven community.</p>
+            <a href="#" class="feature-link">Learn more</a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon private-icon">
+              <i class="fa-solid fa-key"></i>
+            </div>
+            <h3>Private</h3>
+            <p>Enjoy total privacy and control. Premium users can create private projects, restrict access, and manage visibility with enterprise-grade security.</p>
+            <a href="#" class="feature-link">Learn more</a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon protected-icon">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <h3>Protected</h3>
+            <p>Your code and data are protected by industry-leading security. Our paid plans include advanced encryption and dedicated support for peace of mind.</p>
+            <a href="#" class="feature-link">Learn more</a>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon documentation-icon">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>Documentation</h3>
+            <p>Get premium, personalized documentation for every project. Our experts ensure you have everything you need to succeed—step by step.</p>
+            <a href="#" class="feature-link">Learn more</a>
+          </div>
+        </div>
+      </section>
+  
+      <section id="stats" class="stats-section">
+        <h2>My Impact</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" id="websitesCount">0</div>
+            <div class="stat-label">Websites Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="visitorsCount">0</div>
+            <div class="stat-label">Total Visitors</div>
+          </div>
+        </div>
+        <div class="chart-container">
+          <canvas id="visitorsChart" height="120"></canvas>
+        </div>
+      </section>
+  
+      <section id="results-testimonials" class="testimonials-section">
+        <h2 class="testimonials-title">What I Provide, What Clients Say</h2>
+        <div class="testimonials-subtitle">Premium web solutions & real client results</div>
+        <div class="testimonials-grid">
+          <div class="service-card">
+            <div class="service-header">
+              <div class="service-icon">
+                <i class="fa fa-user"></i>
+              </div>
+              <div>
+                <div class="service-title">Web Solutions</div>
+                <div class="service-subtitle">Your business, elevated</div>
+              </div>
+            </div>
+            <div class="service-description">I build modern, high-converting websites and web apps tailored to your goals. From design to deployment, I help you stand out and grow online.</div>
+          </div>
+          <div id="testimonialCard" class="testimonial-fade show testimonial-card">
+            <div class="testimonial-card-content">
+              <div class="testimonial-header">
+                <div id="testimonialAvatar" class="testimonial-avatar"><i class="fa fa-user"></i></div>
+                <div class="testimonial-title-row">
+                  <div class="testimonial-title-wrapper content-wrapper"></div>
+                  <div class="testimonial-subtitle-wrapper content-wrapper"></div>
+                </div>
+              </div>
+              <div class="testimonial-feature-wrapper content-wrapper"></div>
+            </div>
+          </div>
+        </div>
+        <div class="results-chart-container">
+          <div class="chart-title">Client Results: Visitors/Buyers Before & After</div>
+          <canvas id="clientResultsChart" height="120"></canvas>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <div class="scroll-indicator">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  
+  <!-- Unified Footer Start -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">lin.dev</div>
+      <div class="footer-links">
+        <div>
+          <div class="footer-title">Product</div>
+          <div><a href="#features">Features</a></div>
+        </div>
+        <div>
+          <div class="footer-title">Support</div>
+          <div><a href="#">Discord</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">&copy; 2024 lin.dev. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="https://discord.com/users/yourdiscordid" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- Add Chart.js and our script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
